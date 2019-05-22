@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/AppTheme.CommonText"
+    android:id="@+id/ll_stack_root"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@drawable/shape_corner"
+    android:backgroundTint="@color/bright_gray">
+
+    <TextView
+        android:id="@+id/tv_stack_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="整垛" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_stack_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32桶" />
+
+</LinearLayout>

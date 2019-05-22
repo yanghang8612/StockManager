@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">手持出/退库管理</string>
+    <string name="title_delivery">出库</string>
+    <string name="title_return">退货</string>
+
+    <string name="reader_status_label">读写器状态</string>
+    <string name="platform_status_label">平台状态</string>
+
+    <string name="dialog_title">提示</string>
+</resources>

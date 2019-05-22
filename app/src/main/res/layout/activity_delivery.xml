@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme.CommonText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DeliveryActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/appbar_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bill_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="单号"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bill_id"
+        app:layout_constraintEnd_toStartOf="@+id/tv_bill_id"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bill_id" />
+
+    <TextView
+        android:id="@+id/tv_bill_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="HY20190316001"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_dealer_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="经销商"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dealer"
+        app:layout_constraintEnd_toEndOf="@+id/tv_bill_id_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_bill_id_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_dealer" />
+
+    <TextView
+        android:id="@+id/tv_dealer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="水站一"
+        app:layout_constraintEnd_toEndOf="@+id/tv_bill_id"
+        app:layout_constraintStart_toStartOf="@+id/tv_bill_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bill_id" />
+
+    <TextView
+        android:id="@+id/tv_driver_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="提货司机"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_driver"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dealer_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_dealer_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_driver" />
+
+    <TextView
+        android:id="@+id/tv_driver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="张三"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dealer"
+        app:layout_constraintStart_toStartOf="@+id/tv_dealer"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dealer" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_goods_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_corner"
+        android:backgroundTint="@color/bright_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driver">
+
+        <TextView
+            android:id="@+id/tv_goods_name_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="产品名称"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_goods_delivery_count_label"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_goods_delivery_count_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:text="已出库"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_goods_name_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_goods_total_count_label"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tv_goods_name_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_goods_name_label" />
+
+        <TextView
+            android:id="@+id/tv_goods_total_count_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:text="总数量"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_goods_delivery_count_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tv_goods_delivery_count_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_goods_delivery_count_label" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_goods_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cl_goods_header"
+        app:layout_constraintStart_toStartOf="@+id/cl_goods_header"
+        app:layout_constraintTop_toBottomOf="@+id/cl_goods_header" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_stack_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/rv_goods_list"
+        app:layout_constraintStart_toStartOf="@+id/rv_goods_list"
+        app:layout_constraintTop_toBottomOf="@+id/rv_goods_list" />
+
+    <Button
+        android:id="@+id/btn_delivery_revoke"
+        style="@style/ButtonLightGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="撤销"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delivery_mode"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_delivery_mode"
+        style="@style/ButtonLightGray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="出库模式"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_delivery_revoke"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delivery_commit"
+        app:layout_constraintStart_toEndOf="@+id/btn_delivery_revoke"
+        app:layout_constraintTop_toTopOf="@+id/btn_delivery_revoke"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_delivery_commit"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="提交"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_delivery_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_delivery_mode"
+        app:layout_constraintTop_toTopOf="@+id/btn_delivery_mode" />
+</android.support.constraint.ConstraintLayout>

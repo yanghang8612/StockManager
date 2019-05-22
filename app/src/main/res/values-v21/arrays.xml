@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reader_power">
+        <item>15dBm</item>
+        <item>16dBm</item>
+        <item>17dBm</item>
+        <item>18dBm</item>
+        <item>19dBm</item>
+        <item>20dBm</item>
+        <item>21dBm</item>
+        <item>22dBm</item>
+        <item>23dBm</item>
+        <item>24dBm</item>
+        <item>25dBm</item>
+        <item>26dBm</item>
+    </string-array>
+    <string-array name="reader_q_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+</resources>

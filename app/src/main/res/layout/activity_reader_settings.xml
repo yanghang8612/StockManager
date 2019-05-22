@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme.CommonText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.ReaderSettingsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/appbar_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_reader_power_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="end"
+        android:text="读写器功率"
+        app:layout_constraintBottom_toBottomOf="@+id/nsp_reader_power"
+        app:layout_constraintEnd_toStartOf="@+id/nsp_reader_power"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nsp_reader_power" />
+
+    <TextView
+        android:id="@+id/tv_reader_q_value_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="读写器Q值"
+        app:layout_constraintBottom_toBottomOf="@+id/nsp_reader_q_value"
+        app:layout_constraintEnd_toEndOf="@+id/tv_reader_power_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_reader_power_label"
+        app:layout_constraintTop_toTopOf="@+id/nsp_reader_q_value" />
+
+    <TextView
+        android:id="@+id/tv_reader_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="读写器ID"
+        app:layout_constraintBottom_toBottomOf="@+id/et_reader_id"
+        app:layout_constraintEnd_toEndOf="@+id/tv_reader_q_value_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_reader_q_value_label"
+        app:layout_constraintTop_toTopOf="@+id/et_reader_id" />
+
+    <TextView
+        android:id="@+id/tv_device_addr_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="设备云地址"
+        app:layout_constraintBottom_toBottomOf="@+id/et_device_addr"
+        app:layout_constraintEnd_toEndOf="@+id/tv_reader_id_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_reader_id_label"
+        app:layout_constraintTop_toTopOf="@+id/et_device_addr" />
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/nsp_reader_power"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/bright_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/tv_reader_power_label"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/nsp_reader_q_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/bright_gray"
+        app:layout_constraintEnd_toEndOf="@+id/nsp_reader_power"
+        app:layout_constraintStart_toStartOf="@+id/nsp_reader_power"
+        app:layout_constraintTop_toBottomOf="@+id/nsp_reader_power" />
+
+    <EditText
+        android:id="@+id/et_reader_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/nsp_reader_q_value"
+        app:layout_constraintStart_toStartOf="@+id/nsp_reader_q_value"
+        app:layout_constraintTop_toBottomOf="@+id/nsp_reader_q_value" />
+
+    <EditText
+        android:id="@+id/et_device_addr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textUri"
+        app:layout_constraintEnd_toEndOf="@+id/et_reader_id"
+        app:layout_constraintStart_toStartOf="@+id/et_reader_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_reader_id" />
+
+    <TextView
+        android:id="@+id/tv_reader_settings_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="警告：修改读写器配置可能导致软件工作异常"
+        android:theme="@style/AppTheme.WarningText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

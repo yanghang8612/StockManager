@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FullScreen">
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ripple_button</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="ButtonRed" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ripple_button</item>
+        <item name="android:backgroundTint">@color/indian_red</item>
+    </style>
+
+    <style name="ButtonLightGray" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ripple_button</item>
+        <item name="android:backgroundTint">@color/light_gray</item>
+    </style>
+
+    <style name="ButtonGray" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ripple_button</item>
+        <item name="android:backgroundTint">@color/gray_8f</item>
+    </style>
+
+    <style name="AppTheme.CommonText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.BigText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.LargeText">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.PersonText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TitleText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.BillNumber">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.GoodsNumber">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.WarningText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+</resources>

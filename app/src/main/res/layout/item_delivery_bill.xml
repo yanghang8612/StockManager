@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_corner"
+    android:backgroundTint="@color/bright_gray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:theme="@style/AppTheme.CommonText">
+
+    <TextView
+        android:id="@+id/tv_bill_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="提货单号："
+        android:textColor="@color/slate_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dealer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="经销商："
+        app:layout_constraintEnd_toEndOf="@+id/tv_bill_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bill_id_label" />
+
+    <TextView
+        android:id="@+id/tv_driver_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="提货司机："
+        app:layout_constraintEnd_toEndOf="@+id/tv_dealer_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dealer_label" />
+
+    <TextView
+        android:id="@+id/tv_bill_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="HY20190316001"
+        android:textColor="@color/slate_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bill_id_label"
+        app:layout_constraintStart_toEndOf="@+id/tv_bill_id_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_bill_id_label" />
+
+    <TextView
+        android:id="@+id/tv_dealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="水站一"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dealer_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_bill_id"
+        app:layout_constraintTop_toTopOf="@+id/tv_dealer_label" />
+
+    <TextView
+        android:id="@+id/tv_driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张三"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_driver_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_dealer"
+        app:layout_constraintTop_toTopOf="@+id/tv_driver_label" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driver">
+
+        <TextView
+            android:id="@+id/tv_delivery_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="已出库"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total_count_label"
+            app:layout_constraintEnd_toStartOf="@+id/tv_delivery_count"
+            app:layout_constraintTop_toTopOf="@+id/tv_total_count_label" />
+
+        <TextView
+            android:id="@+id/tv_total_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:text="总数量"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total_count"
+            app:layout_constraintEnd_toStartOf="@+id/tv_total_count"
+            app:layout_constraintTop_toTopOf="@+id/tv_total_count" />
+
+        <TextView
+            android:id="@+id/tv_delivery_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:theme="@style/AppTheme.BillNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total_count"
+            app:layout_constraintEnd_toStartOf="@+id/tv_total_count_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_total_count" />
+
+        <TextView
+            android:id="@+id/tv_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:theme="@style/AppTheme.BillNumber"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BillConfirmActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/appbar_common"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dealer_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="end"
+        android:text="经销商名称"
+        app:layout_constraintBottom_toBottomOf="@+id/nsp_dealer"
+        app:layout_constraintEnd_toStartOf="@+id/nsp_dealer"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nsp_dealer" />
+
+    <org.angmarch.views.NiceSpinner
+        android:backgroundTint="@color/bright_gray"
+        android:id="@+id/nsp_dealer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/tv_dealer_label"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/tv_driver_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="司机名称"
+        app:layout_constraintBottom_toBottomOf="@+id/nsp_driver"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dealer_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_dealer_label"
+        app:layout_constraintTop_toTopOf="@+id/nsp_driver" />
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/nsp_driver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/bright_gray"
+        app:layout_constraintEnd_toEndOf="@+id/nsp_dealer"
+        app:layout_constraintStart_toStartOf="@+id/nsp_dealer"
+        app:layout_constraintTop_toBottomOf="@+id/nsp_dealer" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="确认提交"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nsp_driver" />
+</android.support.constraint.ConstraintLayout>
